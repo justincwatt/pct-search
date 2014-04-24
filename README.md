@@ -1,6 +1,6 @@
 pct-search.py
 =============
-`pct-search.php is a simple python script that returns the closest Pacific Crest
+`pct-search.php` is a simple python script that returns the closest Pacific Crest
 Trail (PCT) mile marker waypoint to a supplied latitude and longitude. It depends
 on the `2014_PCT.kml` file which is zipped within the
 [halfmiles_pct_tracks_waypoints.kmz](http://www.pctmap.net/google/) file.
