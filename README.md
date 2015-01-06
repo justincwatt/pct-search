@@ -18,26 +18,26 @@ A sample usage is:
 0156 33.59643,-116.57026 0.1mi
 ```
 
-Typically the latitude and longitude coordinates, and the mile marker values
-are then manually inserted into the Google docs Daily Mileage spreadsheet.
+Typically the latitude and longitude coordinates, and the mile marker waypoint
+values are then manually inserted into the Google docs Mileage Log spreadsheet.
 
 Note: By internally uncommenting lines in pct-search.py, it can also generate
-either pctMileMarkers for script.js or mile_markers for index.php mentioned
-below.
+either `mile_markers` for `index.php` or `pctMileMarkers` for `script.js`
+mentioned below.
 
 pct-search/index.php
 ====================
-Alternatively to the pct-search.py is the `pct-search/index.php` web-site PHP
-file which provides a web interface to convert a latitude and longitude
+Alternatively to the `pct-search.py` is the `pct-search/index.php` web-site
+PHP file which provides a web interface to convert a latitude and longitude
 (typically sent by a SPOT Satellite Messenger) to the nearest PCT mile. The
-latitude and longitude coordinates, and the mile marker values are then
-manually inserted into the Google docs Daily Mileage spreadsheet.
+latitude and longitude coordinates, and the mile marker waypoint values are
+then manually inserted into the Google docs Mileage Log spreadsheet.
 
 script/Code.gs
 ==============
 The `script/Code.gs` file is a Google docs script file which when run
-(typically using an hourly cron job) converts the Google docs Daily Mileage
-spreadsheet to a day-points.js file used by the Google map web-site described
+(typically using an hourly cron job) converts the Google docs Mileage Log
+spreadsheet to a `day-points.js` file used by the Google map web-site described
 below. 
 
 A sample cron job entry is:
@@ -47,7 +47,7 @@ A sample cron job entry is:
 
 pct/index.html, pct/script.js, pct/pct-logo.png, and pct/day-points.js
 ======================================================================
-The `pct/index.html, pct/script.js, pct/pct-logo.png, and pct/day-points.js`
-web-site files plot a Google map with the Halfmile PCT trail in red and the
-day-by-day hiker locations (as defined in day-points.js) using a PCT trail
-marker icon.
+The `pct/index.html`, `pct/script.js`, `pct/pct-logo.png`, and
+`pct/day-points.js` web-site files plot a Google map with the Halfmile PCT
+trail in red and the day-by-day hiker locations (as defined in `day-points.js`)
+using a PCT trail marker icon.
