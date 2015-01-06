@@ -38,6 +38,10 @@ shortest_mile_marker = None
 shortest_longitude = None
 shortest_latitude = None
 
+# Enable following line for output of pctMileMarkers in script.js
+# print 'var pctMileMarkers = ['
+# Enable following line for output of mile_markers in index.php
+# print '$mile_markers = array('
 for placemark in root.iter('{http://www.opengis.net/kml/2.2}Placemark'):
     name = placemark.find('{http://www.opengis.net/kml/2.2}name')
     # there are other placemarks, we only want the ones that look like mile markers, e.g. 0156, 2668-5
@@ -47,11 +51,19 @@ for placemark in root.iter('{http://www.opengis.net/kml/2.2}Placemark'):
         if coordinates is not None:
             # coordinates have the following format: "longitude,latitude,0", e.g. -119.558163,37.727157,0
             longitude, latitude = [float(x) for x in coordinates.text.split(',')][:2]
+            # Enable following line for output of pctMileMarkers in script.js
+            # print '[' , '"' + mile_marker + '"' , ',', latitude, ',', longitude, '],'
+            # Enable following line for output of mile_markers in index.php
+            # print 'array(' , mile_marker.replace("-",".") , ',', latitude, ',', longitude, '),'
             distance = haversine(current_longitude, current_latitude, longitude, latitude)
             if shortest_distance is None or distance < shortest_distance:
                 shortest_distance = distance
                 shortest_mile_marker = mile_marker
                 shortest_latitude = latitude
                 shortest_longitude = longitude
+# Enable following line for output of pctMileMarkers in script.js
+# print '];'
+# Enable following line for output of mile_markers in index.php
+# print ');'
 
 print shortest_mile_marker, str(shortest_latitude) + ',' + str(shortest_longitude), str(round(shortest_distance,1)) + 'mi'
