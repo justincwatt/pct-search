@@ -33,12 +33,25 @@ PHP file which provides a web interface to convert a latitude and longitude
 latitude and longitude coordinates, and the mile marker waypoint values are
 then manually inserted into the Google docs Mileage Log spreadsheet.
 
+`spreadsheet/Dad's PCT Mileage Log.ods`
+=======================================
+The `spreadsheet/Dad's PCT Mileage Log.ods` is the Google docs Mileage Log
+spreadsheet in OpenDocument spreadsheet format for Brian "Tartan" Watt's 2014
+PCT Thru-Hike. It can be used as a template for a new Mileage Log. To create
+a new spreadsheet based upon this, deleted all entries in the Date, Location, 
+Mile Marker, Notes, and E-mail columns then import and upload it to Google
+docs.
+
 script/Code.gs
 ==============
 The `script/Code.gs` file is a Google docs script file which when run
 (typically using an hourly cron job) converts the Google docs Mileage Log
 spreadsheet to a `day-points.js` file used by the Google map web-site described
-below. 
+below. It can be used as a template for a new Google docs script file. To
+create a new script based upon this, update the SPREADSHEET_ID, and SHEET_NAME
+to the new Google docs spreadsheet that was based upon the template above. You
+must also update the cron job entry to refer to this new Google docs script
+file.
 
 A sample cron job entry is:
 ```
