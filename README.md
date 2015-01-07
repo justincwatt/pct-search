@@ -33,14 +33,16 @@ PHP file which provides a web interface to convert a latitude and longitude
 latitude and longitude coordinates, and the mile marker waypoint values are
 then manually inserted into the Google docs Mileage Log spreadsheet.
 
-spreadsheet/Dad's PCT Mileage Log.ods
-=====================================
-The `spreadsheet/Dad's PCT Mileage Log.ods` is the Google docs Mileage Log
-spreadsheet in OpenDocument spreadsheet format for Brian "Tartan" Watt's 2014
-PCT Thru-Hike. It can be used as a template for a new Mileage Log. To create
-a new spreadsheet based upon this, deleted all entries in the Date, Location, 
-Mile Marker, Notes, and E-mail columns then import and upload it to Google
-docs.
+spreadsheet/YourName PCT Mileage Log.ods, and spreadsheet/Dad's PCT Mileage Log.ods
+===================================================================================
+The `spreadsheet/YourName PCT Mileage Log.ods` is an empty Google docs Mileage
+Log spreadsheet in OpenDocument spreadsheet format. It is a template for a new
+Mileage Log. It has all entries deleted for the Date, Location, Mile Marker,
+Notes columns. To use it rename it, then import and upload it to Google docs.
+It expects you will take 150 days to hike the 2650 mile PCT in the Expected
+Miles column formula. If necessary, edit and adjust this formula. As an example
+of a completed spreadsheet see the `spreadsheet/Dad's PCT Mileage Log.ods` for
+Brian "Tartan" Watt's 2014 PCT Thru-Hike. 
 
 script/Code.gs
 ==============
@@ -63,4 +65,5 @@ pct/index.html, pct/script.js, pct/pct-logo.png, and pct/day-points.js
 The `pct/index.html`, `pct/script.js`, `pct/pct-logo.png`, and
 `pct/day-points.js` web-site files plot a Google map with the Halfmile PCT
 trail in red and the day-by-day hiker locations (as defined in `day-points.js`)
-using a PCT trail marker icon.
+using a PCT trail marker icon. Note: A sample `pct/day-points.js` file is
+provided even though it is overwritten when the cron job runs described above.
