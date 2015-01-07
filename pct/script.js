@@ -44,9 +44,14 @@ function plotDayPoints(dayPoints) {
         var dateParts = dayPoints[i][1].split(" "); // e.g. Wed Apr 16 00:00:00 GMT-07:00 2014
         var coords = dayPoints[i][2].split(",");
         var position = {lat: parseFloat(coords[0]), lng: parseFloat(coords[1])};
+        // display pct trail marker icon centered at position
+        var icon = {
+        	url: 'pct-logo.png',
+            anchor: new google.maps.Point(12, 12)
+        };
         var marker = new google.maps.Marker({
             position: position,
-            icon: 'pct-logo.png',
+            icon: icon,
             html: 
                 '<strong>' + dayPoints[0][0] + '</strong>: ' + dayPoints[i][0] + '<br/>' +
                 '<strong>' + dayPoints[0][1] + '</strong>: ' + dateParts[0] + ', ' + dateParts[1] + ' ' + dateParts[2] + ', ' + dateParts[5] + '<br/>' +
