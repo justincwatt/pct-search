@@ -48,15 +48,15 @@ function plotDayPoints(dayPoints) {
             position: position,
             icon: 'pct-logo.png',
             html: 
-                '<strong>Day</strong>: '           + dayPoints[i][0] + '<br/>' +
-                '<strong>Date</strong>: '          + dateParts[0] + ', ' + dateParts[1] + ' ' + dateParts[2] + ', ' + dateParts[5] + '<br/>' +
-                '<strong>Lat/Lon</strong>: '       + dayPoints[i][2] + '<br/>' +
-                '<strong>PCT Mile</strong>: '      + dayPoints[i][3] + '<br/>' +
-                '<strong>Expected</strong>: '      + dayPoints[i][4] + '<br/>' +
-                '<strong>Miles Banked</strong>: '  + dayPoints[i][5] + '<br/>' +
-                '<strong>Daily Miles</strong>: '   + dayPoints[i][6] + '<br/>' +
-                '<strong>Daily Average</strong>: ' + dayPoints[i][7] + '<br/>' +
-                '<strong>Notes</strong>: '         + dayPoints[i][8]
+                '<strong>' + dayPoints[0][0] + '</strong>: ' + dayPoints[i][0] + '<br/>' +
+                '<strong>' + dayPoints[0][1] + '</strong>: ' + dateParts[0] + ', ' + dateParts[1] + ' ' + dateParts[2] + ', ' + dateParts[5] + '<br/>' +
+                '<strong>' + dayPoints[0][2] + '</strong>: ' + dayPoints[i][2] + '<br/>' +
+                '<strong>' + dayPoints[0][3] + '</strong>: ' + dayPoints[i][3] + '<br/>' +
+                '<strong>' + dayPoints[0][4] + '</strong>: ' + dayPoints[i][4] + '<br/>' +
+                '<strong>' + dayPoints[0][5] + '</strong>: ' + dayPoints[i][5] + '<br/>' +
+                '<strong>' + dayPoints[0][6] + '</strong>: ' + dayPoints[i][6] + '<br/>' +
+                '<strong>' + dayPoints[0][7] + '</strong>: ' + dayPoints[i][7] + '<br/>' +
+                '<strong>' + dayPoints[0][8] + '</strong>: ' + dayPoints[i][8]
         });
 
         google.maps.event.addListener(marker, 'click', function() {
