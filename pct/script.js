@@ -35,6 +35,7 @@ function initialize() {
 }
 
 function plotDayPoints(dayPoints) {
+	var path = []; // hiker path
     // start with i = 1 because first row has headers
     for (var i = 1; i < dayPoints.length; i++) {
         // only process rows that have a lat,lng
@@ -44,6 +45,7 @@ function plotDayPoints(dayPoints) {
         var dateParts = dayPoints[i][1].split(" "); // e.g. Wed Apr 16 00:00:00 GMT-07:00 2014
         var coords = dayPoints[i][2].split(",");
         var position = {lat: parseFloat(coords[0]), lng: parseFloat(coords[1])};
+        path.push(position); // Add position to hiker path
 //        // display pct trail marker icon centered at position
 //        var icon = {
 //        	url: 'pct-logo.png',
@@ -76,6 +78,17 @@ function plotDayPoints(dayPoints) {
 
         markers.push(marker);
     }
+
+    // add hiker path to map
+    var polyline = new google.maps.Polyline({
+	    path: path,
+	    geodesic: true,
+	    strokeColor: '#CC00FF',
+	    strokeOpacity: 1.0,
+	    strokeWeight: 2
+    });
+
+    polyline.setMap(map);
 
     // recenter map at last position
     map.setCenter(position);
