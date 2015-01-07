@@ -33,8 +33,8 @@ PHP file which provides a web interface to convert a latitude and longitude
 latitude and longitude coordinates, and the mile marker waypoint values are
 then manually inserted into the Google docs Mileage Log spreadsheet.
 
-`spreadsheet/Dad's PCT Mileage Log.ods`
-=======================================
+spreadsheet/Dad's PCT Mileage Log.ods
+=====================================
 The `spreadsheet/Dad's PCT Mileage Log.ods` is the Google docs Mileage Log
 spreadsheet in OpenDocument spreadsheet format for Brian "Tartan" Watt's 2014
 PCT Thru-Hike. It can be used as a template for a new Mileage Log. To create
