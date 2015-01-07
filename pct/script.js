@@ -44,10 +44,15 @@ function plotDayPoints(dayPoints) {
         var dateParts = dayPoints[i][1].split(" "); // e.g. Wed Apr 16 00:00:00 GMT-07:00 2014
         var coords = dayPoints[i][2].split(",");
         var position = {lat: parseFloat(coords[0]), lng: parseFloat(coords[1])};
-        // display pct trail marker icon centered at position
+//        // display pct trail marker icon centered at position
+//        var icon = {
+//        	url: 'pct-logo.png',
+//            anchor: new google.maps.Point(12, 12)
+//        };
+        // display bubble with day number and shadow at position
         var icon = {
-        	url: 'pct-logo.png',
-            anchor: new google.maps.Point(12, 12)
+            url: 'http://chart.apis.google.com/chart?chst=d_bubble_text_small_withshadow&chld=bb|' + dayPoints[i][0] + '|FFFFFF|000000',
+            anchor: new google.maps.Point(0, 42)
         };
         var marker = new google.maps.Marker({
             position: position,
