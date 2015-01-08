@@ -97,7 +97,7 @@ function plotDayPoints(dayPoints) {
     // recenter map at first or last position
     var position = markers[focusMarker].getPosition();
     map.setCenter(position);
-    map.setZoom(9);
+    map.setZoom(8); // default to every day
 
     // add markers to map
     for (var i = 0; i < markers.length; i++) {
@@ -111,21 +111,18 @@ function plotDayPoints(dayPoints) {
         var mod;
 
         if (map.getZoom() >= 8) {
-            mod = 1;
+            mod = 1; // every day
         } else if (map.getZoom() == 7) {
-            mod = 2;
+            mod = 7; // every week
         } else if (map.getZoom() == 6) {
-            mod = 3;
+            mod = 7; // every week
         } else if (map.getZoom() == 5) {
-            mod = 6;
+            mod = 30; // every month
         } else if (map.getZoom() == 4) {
-            mod = 14;
-        } else if (map.getZoom() == 3) {
-            mod = 30;
-        } else if (map.getZoom() == 2) {
-            mod = 50;
-        } else {
-            mod = markers.length;
+            mod = 30; // every month
+        } else if (map.getZoom() <= 3) {
+            mod = markers.length; // first and last days
+
         }
 
         for (i = 0; i < markers.length; i++) {
