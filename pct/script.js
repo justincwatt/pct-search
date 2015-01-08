@@ -90,7 +90,12 @@ function plotDayPoints(dayPoints) {
 
     polyline.setMap(map);
 
-    // recenter map at last position
+    // Select focus on first or last marker (enable one line or the other below)
+    // focusMarker = 0; // first Marker
+    focusMarker = markers.length-1; // last Marker
+
+    // recenter map at first or last position
+    var position = markers[focusMarker].getPosition();
     map.setCenter(position);
     map.setZoom(9);
 
@@ -99,8 +104,8 @@ function plotDayPoints(dayPoints) {
         markers[i].setMap(map);
     }
 
-    // automatically open the info window for the last marker
-    google.maps.event.trigger(markers[markers.length - 1], 'click');
+    // automatically open the info window for the first or last marker
+    google.maps.event.trigger(markers[focusMarker], 'click');
 
     google.maps.event.addListener(map, 'zoom_changed', function() {
         var mod;
