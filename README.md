@@ -33,15 +33,15 @@ PHP file which provides a web interface to convert a latitude and longitude
 latitude and longitude coordinates, and the mile marker waypoint values are
 then manually inserted into the Google docs Mileage Log spreadsheet.
 
-spreadsheet/YourName PCT Mileage Log.ods, and spreadsheet/Dad's PCT Mileage Log.ods
-===================================================================================
-The `spreadsheet/YourName PCT Mileage Log.ods` is an empty Google docs Mileage
-Log spreadsheet in OpenDocument spreadsheet format. It is a template for a new
-Mileage Log. It has all entries deleted for the Date, Location, Mile Marker,
+spreadsheet/YourName PCT Mileage Log.xlsx, and spreadsheet/Dad's PCT Mileage Log.xlsx
+=====================================================================================
+The `spreadsheet/YourName PCT Mileage Log.xlsx` is an empty Google docs Mileage
+Log spreadsheet in Microsoft EXCEL spreadsheet format. It is a template for a
+new Mileage Log. It has all entries deleted for the Date, Location, Mile Marker,
 Notes columns. To use it rename it, then import and upload it to Google docs.
 It expects you will take 150 days to hike the 2650 mile PCT in the Expected
 Miles column formula. If necessary, edit and adjust this formula. As an example
-of a completed spreadsheet see the `spreadsheet/Dad's PCT Mileage Log.ods` for
+of a completed spreadsheet see the `spreadsheet/Dad's PCT Mileage Log.xslx` for
 Brian "Tartan" Watt's 2014 PCT Thru-Hike. 
 
 script/Code.gs
