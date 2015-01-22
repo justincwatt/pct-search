@@ -1,0 +1,2 @@
+MAILTO="jwatt@justinsomnia.org"
+@hourly wget -q https://script.google.com/macros/s/AKfycbzbbKNCY1tLJrxwRPWXpmlEOaT2blKHBeAsBATn7mfQVPxTsALxukk/exec?jsonp=plotDayPoints -O - > /home/jwatt/justinsomnia.org/pct/day-points.js

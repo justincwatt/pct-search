@@ -51,14 +51,13 @@ The `script/Code.gs` file is a Google docs script file which when run
 spreadsheet to a `day-points.js` file used by the Google map web-site described
 below. It can be used as a template for a new Google docs script file. To
 create a new script based upon this, update the SPREADSHEET_ID, and SHEET_NAME
-to the new Google docs spreadsheet that was based upon the template above. You
-must also update the cron job entry to refer to this new Google docs script
-file.
+to the new Google docs spreadsheet that was based upon the template above. 
 
-A sample cron job entry is:
-```
-@hourly wget -q https://script.google.com/macros/s/AKfycbzbbKNCY1tLJrxwRPWXpmlEOaT2blKHBeAsBATn7mfQVPxTsALxukk/exec?jsonp=plotDayPoints -O - > /home/jwatt/justinsomnia.org/pct/day-points.js
-```
+crontab/entry.txt
+=================
+You must also update the cron job entry on your website to execute the Google
+docs script file which produces the day-points.js file. A sample cron job
+entry is found in entry.txt.
 
 pct/index.html, pct/script.js, pct/pct-logo.png, and pct/day-points.js
 ======================================================================
@@ -66,4 +65,5 @@ The `pct/index.html`, `pct/script.js`, `pct/pct-logo.png`, and
 `pct/day-points.js` web-site files plot a Google map with the Halfmile PCT
 trail in red and the day-by-day hiker locations (as defined in `day-points.js`)
 using a PCT trail marker icon. Note: A sample `pct/day-points.js` file is
-provided even though it is overwritten when the cron job runs described above.
+provided even though it is overwritten when the cron job runs as described
+above.
