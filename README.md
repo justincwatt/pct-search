@@ -4,9 +4,8 @@ marker to a supplied latitude and longitude coordinate.
 2. A simple PHP web-site that takes a supplied latitude and longitude
 coordinate and presents the closest Pacific Crest Trail mile marker.
 3. A web-site that plots markers showing the progress each day of a hiker
-from an associated Google Docs Mile Log spreadsheet and a plot of Halfmile's
-Pacific Crest Trail.
-.
+from an associated Google Docs Mileage Log spreadsheet and plots Halfmile's
+Pacific Crest Trail track.
 
 pct-search.py
 =============
