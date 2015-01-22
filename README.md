@@ -1,3 +1,13 @@
+This repository contains three related sub-projects
+1. A simple Python script that returns the closest Pacific Crest Trail mile
+marker to a supplied latitude and longitude coordinate.
+2. A simple PHP web-site that takes a supplied latitude and longitude
+coordinate and presents the closest Pacific Crest Trail mile marker.
+3. A web-site that plots markers showing the progress each day of a hiker
+from an associated Google Docs Mile Log spreadsheet and a plot of Halfmile's
+Pacific Crest Trail.
+.
+
 pct-search.py
 =============
 The `pct-search.py` file is a simple python script that returns the closest
