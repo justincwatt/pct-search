@@ -26,8 +26,8 @@ def haversine(lon1, lat1, lon2, lat2):
     a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
     c = 2 * asin(sqrt(a)) 
 
-    # 3963mi is the radius of the Earth
-    mi = 3963 * c
+    # 3963.1676 mi is the radius of the Earth
+    mi = 3963.1676 * c
     return mi
 
 tree = ET.parse('2014_PCT.kml')
