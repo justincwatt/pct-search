@@ -1,7 +1,7 @@
 <?php
 
 function haversine(
-  $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 3963)
+  $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 3963.1676)
 {
   // convert from degrees to radians
   $latFrom = deg2rad($latitudeFrom);
