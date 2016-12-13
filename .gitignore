@@ -1,2 +1,4 @@
 *.kml
 *.kmz
+/.project
+/.gitignore
